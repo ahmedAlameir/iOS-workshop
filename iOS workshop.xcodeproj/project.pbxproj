@@ -13,6 +13,9 @@
 		765CFD9A2A1EB22100944D81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 765CFD982A1EB22100944D81 /* Main.storyboard */; };
 		765CFD9C2A1EB22600944D81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 765CFD9B2A1EB22600944D81 /* Assets.xcassets */; };
 		765CFD9F2A1EB22600944D81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 765CFD9D2A1EB22600944D81 /* LaunchScreen.storyboard */; };
+		76F06A4B2A20A48500144743 /* FoodCategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F06A492A20A48500144743 /* FoodCategoriesCollectionViewCell.swift */; };
+		76F06A4C2A20A48500144743 /* FoodCategoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76F06A4A2A20A48500144743 /* FoodCategoriesCollectionViewCell.xib */; };
+		76F06A4F2A20ABBA00144743 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F06A4E2A20ABBA00144743 /* GradientView.swift */; };
 		984D004392E6451BECADC08E /* Pods_iOS_workshop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F58BA2446C75D237727A3C /* Pods_iOS_workshop.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +30,9 @@
 		765CFD9B2A1EB22600944D81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		765CFD9E2A1EB22600944D81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		765CFDA02A1EB22600944D81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76F06A492A20A48500144743 /* FoodCategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		76F06A4A2A20A48500144743 /* FoodCategoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodCategoriesCollectionViewCell.xib; sourceTree = "<group>"; };
+		76F06A4E2A20ABBA00144743 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		A9F58BA2446C75D237727A3C /* Pods_iOS_workshop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_workshop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -72,6 +78,8 @@
 		765CFD912A1EB22100944D81 /* iOS workshop */ = {
 			isa = PBXGroup;
 			children = (
+				76F06A4D2A20AB7600144743 /* IBDesignable */,
+				76F06A472A20A37E00144743 /* Cells */,
 				765CFD922A1EB22100944D81 /* AppDelegate.swift */,
 				765CFD942A1EB22100944D81 /* SceneDelegate.swift */,
 				765CFD962A1EB22100944D81 /* ViewController.swift */,
@@ -81,6 +89,31 @@
 				765CFDA02A1EB22600944D81 /* Info.plist */,
 			);
 			path = "iOS workshop";
+			sourceTree = "<group>";
+		};
+		76F06A472A20A37E00144743 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				76F06A482A20A38A00144743 /* Food Categories */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		76F06A482A20A38A00144743 /* Food Categories */ = {
+			isa = PBXGroup;
+			children = (
+				76F06A492A20A48500144743 /* FoodCategoriesCollectionViewCell.swift */,
+				76F06A4A2A20A48500144743 /* FoodCategoriesCollectionViewCell.xib */,
+			);
+			path = "Food Categories";
+			sourceTree = "<group>";
+		};
+		76F06A4D2A20AB7600144743 /* IBDesignable */ = {
+			isa = PBXGroup;
+			children = (
+				76F06A4E2A20ABBA00144743 /* GradientView.swift */,
+			);
+			path = IBDesignable;
 			sourceTree = "<group>";
 		};
 		79B2136F0E8277BC3168D938 /* Frameworks */ = {
@@ -153,6 +186,7 @@
 			files = (
 				765CFD9F2A1EB22600944D81 /* LaunchScreen.storyboard in Resources */,
 				765CFD9C2A1EB22600944D81 /* Assets.xcassets in Resources */,
+				76F06A4C2A20A48500144743 /* FoodCategoriesCollectionViewCell.xib in Resources */,
 				765CFD9A2A1EB22100944D81 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,6 +242,8 @@
 			files = (
 				765CFD972A1EB22100944D81 /* ViewController.swift in Sources */,
 				765CFD932A1EB22100944D81 /* AppDelegate.swift in Sources */,
+				76F06A4F2A20ABBA00144743 /* GradientView.swift in Sources */,
+				76F06A4B2A20A48500144743 /* FoodCategoriesCollectionViewCell.swift in Sources */,
 				765CFD952A1EB22100944D81 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
