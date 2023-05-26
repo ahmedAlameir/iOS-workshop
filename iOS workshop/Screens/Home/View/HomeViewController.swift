@@ -9,9 +9,10 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var homeTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        homeTableView.dataSource = self
     }
 
 
@@ -25,4 +26,16 @@ class HomeViewController: UIViewController {
     }
     */
 
+}
+extension HomeViewController:
+    UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       return UITableViewCell()
+    }
+    
+    
 }
