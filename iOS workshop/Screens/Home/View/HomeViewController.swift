@@ -9,8 +9,25 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var categoryCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        categoryCollectionView.register(UINib(nibName: "FoodCategoriesCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "FoodCategoriesCollectionViewCell")
+        categoryCollectionView.delegate = self
+        categoryCollectionView.dataSource = self
+        let layeout = UICollectionViewFlowLayout()
+        layeout.itemSize = CGSize(width: 72, height: 96)
+        layeout.scrollDirection = .horizontal
+        layeout.minimumInteritemSpacing = 0
+        layeout.minimumLineSpacing = 5
+        let titleLabel = UILabel()
+          titleLabel.text = "Food Recipes"
+          titleLabel.textAlignment = .center
+          titleLabel.font = UIFont.boldSystemFont(ofSize: 24) // Customize the font if needed
+          titleLabel.sizeToFit()
+        navigationItem.titleView = titleLabel
+        categoryCollectionView.collectionViewLayout = layeout
+        
         // Do any additional setup after loading the view.
     }
 
@@ -25,4 +42,21 @@ class HomeViewController: UIViewController {
     }
     */
 
+}
+extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return Categories.getCategories().count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = categoryCollectionView.dequeueReusableCell(withReuseIdentifier: "FoodCategoriesCollectionViewCell", for: indexPath) as! FoodCategoriesCollectionViewCell
+        let categories = Categories.getCategories()
+        let image =  categories[indexPath.row].categorieImage
+        cell.categoriesImage.image  = UIImage(named: categories[indexPath.row].categorieImage)
+        cell.categoriesName.text = categories[indexPath.row].categorieName
+
+        return cell
+    }
+    
+    
 }

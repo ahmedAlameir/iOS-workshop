@@ -50,7 +50,9 @@
                             <constraint firstItem="Gf4-ue-WCN" firstAttribute="leading" secondItem="MAj-5j-NIv" secondAttribute="leading" constant="6" id="ErW-Gh-on9"/>
                             <constraint firstItem="XKA-c2-ef9" firstAttribute="leading" secondItem="MAj-5j-NIv" secondAttribute="leading" id="GMP-63-moA"/>
                             <constraint firstAttribute="trailing" secondItem="XKA-c2-ef9" secondAttribute="trailing" id="GbD-Jr-RGY"/>
+                            <constraint firstAttribute="width" constant="72" id="QJG-S3-4NK"/>
                             <constraint firstAttribute="trailing" secondItem="Gf4-ue-WCN" secondAttribute="trailing" constant="6" id="Ryj-aT-k4o"/>
+                            <constraint firstAttribute="height" constant="96" id="aMh-ul-1PK"/>
                             <constraint firstAttribute="bottom" secondItem="XKA-c2-ef9" secondAttribute="bottom" id="fMz-WJ-vGf"/>
                         </constraints>
                     </view>
@@ -65,21 +67,12 @@
             </constraints>
             <size key="customSize" width="70" height="107"/>
             <connections>
-                <outlet property="categoriesImage" destination="LUW-ev-UgX" id="j3t-ex-Jpy"/>
+                <outlet property="categoriesImage" destination="LUW-ev-UgX" id="Q9E-Ab-GO2"/>
                 <outlet property="categoriesName" destination="XKA-c2-ef9" id="uWB-tH-UXt"/>
                 <outlet property="categoriesView" destination="Gf4-ue-WCN" id="0dK-Bw-nQj"/>
-                <outlet property="foodImage" destination="LUW-ev-UgX" id="h2Y-Ko-AKS"/>
-                <outlet property="foodView" destination="Gf4-ue-WCN" id="hzG-0e-Hra"/>
             </connections>
-            <point key="canvasLocation" x="105.79710144927537" y="132.25446428571428"/>
+            <point key="canvasLocation" x="107" y="141"/>
         </collectionViewCell>
-        <view contentMode="scaleToFill" id="AXc-K9-4pz">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <viewLayoutGuide key="safeArea" id="EkP-nM-q2G"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="733" y="216"/>
-        </view>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
