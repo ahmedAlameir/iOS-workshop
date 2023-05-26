@@ -121,7 +121,12 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="chefName" destination="EVl-4b-kvq" id="RW7-pL-llW"/>
                 <outlet property="favBackgroundView" destination="ULB-Db-jWu" id="2bH-dY-7hc"/>
+                <outlet property="favImage" destination="a8x-Nw-NZ7" id="Fvq-rp-jYD"/>
+                <outlet property="foodTypeName" destination="QTA-Nb-xlv" id="GnD-mO-dv2"/>
+                <outlet property="recipeName" destination="un8-3w-YFn" id="O92-Pj-yUb"/>
+                <outlet property="servingsNumber" destination="fM4-2u-vSX" id="AAc-yw-Wrc"/>
             </connections>
             <point key="canvasLocation" x="87.022900763358777" y="46.83098591549296"/>
         </tableViewCell>
