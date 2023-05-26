@@ -16,6 +16,10 @@ struct Categories{
         self.categorieKey = categorieName
     }
     static func getCategories()-> [Categories] {
-        return [Categories(categorieName: "breakfast", categorieImage: "ic_breakfast", categorieKey: "")]
+        return [Categories(categorieName: "Popular", categorieImage: "ic_fire", categorieKey: "middle_eastern"),
+                Categories(categorieName: "Breakfast", categorieImage: "ic_breakfast", categorieKey: "breakfast"),
+                Categories(categorieName: "Lunch", categorieImage: "lunch-box", categorieKey: "lunch"),
+                Categories(categorieName: "Dinner", categorieImage: "ic_weddingDinner", categorieKey: "dinner"),
+                Categories(categorieName: "Dessert", categorieImage: "ic_breakfast", categorieKey: "desserts")]
     }
 }

@@ -21,15 +21,15 @@ class HomeTabBar: UITabBarController {
     
     func setupVCs() {
             viewControllers = [
-                createNavController(for: ViewController(), title: NSLocalizedString("Home", comment: ""), image: UIImage(systemName: "house")!),
-                createNavController(for: ViewController(), title: NSLocalizedString("Favourite", comment: ""), image: UIImage(systemName: "heart")!),
+                createNavController(for: ViewController(), title: NSLocalizedString("Home", comment: ""), image: UIImage(systemName: "house")),
+                createNavController(for: ViewController(), title: NSLocalizedString("Favourite", comment: ""), image: UIImage(systemName: "heart")),
                 
             ]
         }
 
     fileprivate func createNavController(for rootViewController: UIViewController,
                                                       title: String,
-                                                      image: UIImage) -> UIViewController {
+                                                      image: UIImage?) -> UIViewController {
             let navController = UINavigationController(rootViewController: rootViewController)
             navController.tabBarItem.title = title
             navController.tabBarItem.image = image
