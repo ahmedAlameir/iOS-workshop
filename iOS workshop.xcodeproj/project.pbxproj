@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E39D92A2A20A6560005E141 /* HomeTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E39D9282A20A6560005E141 /* HomeTabBar.swift */; };
+		0E39D92B2A20A6560005E141 /* HomeTabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E39D9292A20A6560005E141 /* HomeTabBar.xib */; };
 		765CFD932A1EB22100944D81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CFD922A1EB22100944D81 /* AppDelegate.swift */; };
 		765CFD952A1EB22100944D81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CFD942A1EB22100944D81 /* SceneDelegate.swift */; };
 		765CFD972A1EB22100944D81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CFD962A1EB22100944D81 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E39D9282A20A6560005E141 /* HomeTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBar.swift; sourceTree = "<group>"; };
+		0E39D9292A20A6560005E141 /* HomeTabBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabBar.xib; sourceTree = "<group>"; };
 		11B62E1BE9531C3D959DDC71 /* Pods-iOS workshop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS workshop.release.xcconfig"; path = "Target Support Files/Pods-iOS workshop/Pods-iOS workshop.release.xcconfig"; sourceTree = "<group>"; };
 		3B936D3D4CBEDECAC3D713C0 /* Pods-iOS workshop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS workshop.debug.xcconfig"; path = "Target Support Files/Pods-iOS workshop/Pods-iOS workshop.debug.xcconfig"; sourceTree = "<group>"; };
 		765CFD8F2A1EB22100944D81 /* iOS workshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS workshop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +46,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E39D9202A209FD10005E141 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				0E39D9212A209FDE0005E141 /* Home */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		0E39D9212A209FDE0005E141 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0E39D9282A20A6560005E141 /* HomeTabBar.swift */,
+				0E39D9292A20A6560005E141 /* HomeTabBar.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0E39D9262A20A0670005E141 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0E39D9272A20A0730005E141 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		4BF7FEC625C7E2A66AAFE75D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +107,9 @@
 		765CFD912A1EB22100944D81 /* iOS workshop */ = {
 			isa = PBXGroup;
 			children = (
+				0E39D9272A20A0730005E141 /* Service */,
+				0E39D9262A20A0670005E141 /* Cells */,
+				0E39D9202A209FD10005E141 /* Screens */,
 				765CFD922A1EB22100944D81 /* AppDelegate.swift */,
 				765CFD942A1EB22100944D81 /* SceneDelegate.swift */,
 				765CFD962A1EB22100944D81 /* ViewController.swift */,
@@ -154,6 +192,7 @@
 				765CFD9F2A1EB22600944D81 /* LaunchScreen.storyboard in Resources */,
 				765CFD9C2A1EB22600944D81 /* Assets.xcassets in Resources */,
 				765CFD9A2A1EB22100944D81 /* Main.storyboard in Resources */,
+				0E39D92B2A20A6560005E141 /* HomeTabBar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +247,7 @@
 			files = (
 				765CFD972A1EB22100944D81 /* ViewController.swift in Sources */,
 				765CFD932A1EB22100944D81 /* AppDelegate.swift in Sources */,
+				0E39D92A2A20A6560005E141 /* HomeTabBar.swift in Sources */,
 				765CFD952A1EB22100944D81 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
