@@ -20,6 +20,8 @@
 		762EA3A92A20F05A009730BB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EA3A02A20F05A009730BB /* HomeViewController.swift */; };
 		762EA3AA2A20F05A009730BB /* HomeTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EA3A22A20F05A009730BB /* HomeTabBar.swift */; };
 		762EA3AB2A20F05A009730BB /* HomeTabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 762EA3A32A20F05A009730BB /* HomeTabBar.xib */; };
+		762EA3AD2A210A3A009730BB /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EA3AC2A210A3A009730BB /* Recipe.swift */; };
+		762EA3AF2A210B92009730BB /* MealAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EA3AE2A210B92009730BB /* MealAPI.swift */; };
 		765CFD932A1EB22100944D81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CFD922A1EB22100944D81 /* AppDelegate.swift */; };
 		765CFD952A1EB22100944D81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CFD942A1EB22100944D81 /* SceneDelegate.swift */; };
 		765CFD9C2A1EB22600944D81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 765CFD9B2A1EB22600944D81 /* Assets.xcassets */; };
@@ -43,6 +45,8 @@
 		762EA3A02A20F05A009730BB /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		762EA3A22A20F05A009730BB /* HomeTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabBar.swift; sourceTree = "<group>"; };
 		762EA3A32A20F05A009730BB /* HomeTabBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTabBar.xib; sourceTree = "<group>"; };
+		762EA3AC2A210A3A009730BB /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		762EA3AE2A210B92009730BB /* MealAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MealAPI.swift; path = "iOS workshop/Moble/MealAPI.swift"; sourceTree = SOURCE_ROOT; };
 		765CFD8F2A1EB22100944D81 /* iOS workshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS workshop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		765CFD922A1EB22100944D81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		765CFD942A1EB22100944D81 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 		0E39D9272A20A0730005E141 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				762EA3AE2A210B92009730BB /* MealAPI.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				762EA3802A20C828009730BB /* Categories.swift */,
+				762EA3AC2A210A3A009730BB /* Recipe.swift */,
 			);
 			path = Moble;
 			sourceTree = "<group>";
@@ -422,6 +428,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				762EA3A62A20F05A009730BB /* FavouritesViewController.swift in Sources */,
+				762EA3AF2A210B92009730BB /* MealAPI.swift in Sources */,
 				762EA3A72A20F05A009730BB /* HomeViewModel.swift in Sources */,
 				762EA38F2A20E2B1009730BB /* FoodCategoriesCollectionViewCell.swift in Sources */,
 				762EA3A42A20F05A009730BB /* FvaouritesViewModel.swift in Sources */,
@@ -431,6 +438,7 @@
 				765CFD932A1EB22100944D81 /* AppDelegate.swift in Sources */,
 				765CFD952A1EB22100944D81 /* SceneDelegate.swift in Sources */,
 				762EA3812A20C828009730BB /* Categories.swift in Sources */,
+				762EA3AD2A210A3A009730BB /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

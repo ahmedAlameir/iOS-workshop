@@ -61,7 +61,6 @@ class HomeTabBar: UITabBarController {
             navController.tabBarItem.image = image
         navController.tabBarItem.selectedImage = imageColored
             navController.navigationBar.prefersLargeTitles = true
-            rootViewController.navigationItem.title = title
             return navController
         }
 
