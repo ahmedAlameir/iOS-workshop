@@ -6,3 +6,29 @@
 //
 
 import Foundation
+class HomeVIewModel{
+    var isLoading : Observable<Bool> = Observable(value: false)
+    var cellDataSource : Observable<HomeViewStruct> = Observable(value:nil)
+    var foodApi = FoodApi()
+    var dataSource : [Meal] = Array<Meal>()
+    func getData(foodTag :String){
+        if isLoading.value ?? true{
+            return
+        }
+        isLoading.value = true
+        foodApi.fetchFood(foodTag: foodTag){[weak self] result in
+            self?.isLoading.value = false
+            switch result{
+            case .success(let data):
+                self?.dataSource = data ?? []
+                self?.mapToTableData()
+            case .failure(let error):
+                print(error.localizedDescription)
+                
+            }
+        }
+    }
+    func mapToTableData(){
+        cellDataSource.value = HomeViewStruct(meals: dataSource)
+    }
+}

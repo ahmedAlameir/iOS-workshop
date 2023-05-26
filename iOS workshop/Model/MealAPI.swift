@@ -33,3 +33,8 @@ class FoodApi {
     }
     
 }
+enum NetworkError : Error{
+    case urlError
+    case canNotParseData
+}
+
