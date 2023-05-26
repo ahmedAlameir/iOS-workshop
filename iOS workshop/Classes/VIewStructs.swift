@@ -7,8 +7,4 @@
 
 import Foundation
 
-struct HomeViewStruct {
-    init(meals : [Meal]){
-        	
-    }
-}
+

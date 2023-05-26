@@ -8,9 +8,9 @@
 import Foundation
 class HomeVIewModel{
     var isLoading : Observable<Bool> = Observable(value: false)
-    var cellDataSource : Observable<HomeViewStruct> = Observable(value:nil)
+    var cellDataSource : Observable<Array<Meal>> = Observable(value:nil)
     var foodApi = FoodApi()
-    var dataSource : [Meal] = Array<Meal>()
+   // var dataSource : [Meal] = Array<Meal>()
     func getData(foodTag :String){
         if isLoading.value ?? true{
             return
@@ -20,15 +20,16 @@ class HomeVIewModel{
             self?.isLoading.value = false
             switch result{
             case .success(let data):
-                self?.dataSource = data ?? []
-                self?.mapToTableData()
+                self?.cellDataSource.value = data
+               // self?.dataSource = data ?? []
+              //  self?.mapToTableData()
             case .failure(let error):
                 print(error.localizedDescription)
                 
             }
         }
     }
-    func mapToTableData(){
-        cellDataSource.value = HomeViewStruct(meals: dataSource)
-    }
+//    func mapToTableData(){
+//        cellDataSource.value = HomeViewStruct(meals: dataSource)
+//    }
 }

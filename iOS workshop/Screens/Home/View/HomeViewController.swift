@@ -9,11 +9,18 @@ import UIKit
 
 class HomeViewController: UIViewController {
     var selectedIndexPath: IndexPath?
-
+    var meals : [Meal] = []
+    @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var categoryCollectionView: UICollectionView!
+    let viewModel = HomeVIewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableview.delegate = self
+        tableview.dataSource = self
+        
         categoryCollectionView.register(UINib(nibName: "FoodCategoriesCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "FoodCategoriesCollectionViewCell")
+        tableview.register(UINib(nibName: "RecipeCell", bundle: .main), forCellReuseIdentifier: "RecipeCell")
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
         let layeout = UICollectionViewFlowLayout()
@@ -28,7 +35,14 @@ class HomeViewController: UIViewController {
           titleLabel.sizeToFit()
         navigationItem.titleView = titleLabel
         categoryCollectionView.collectionViewLayout = layeout
-        
+        viewModel.getData(foodTag: Categories.getCategories()[0].categorieKey)
+        viewModel.cellDataSource.bind(){ [weak self] meal in
+            guard let meals = meal else {
+                return
+            }
+            self?.meals = meals
+            self?.tableview.reloadData()
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -55,6 +69,11 @@ extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource
         cell.categoriesImage.image  = UIImage(named: categories[indexPath.row].categorieImage)
         cell.categoriesName.text = categories[indexPath.row].categorieName
 
+        if(indexPath.row == 0){
+            cell.itemSelected() // Set the desired color
+            selectedIndexPath = indexPath
+
+        }
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -66,11 +85,31 @@ extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource
         // Update the color for the newly selected cell
         let cell = collectionView.cellForItem(at: indexPath)as! FoodCategoriesCollectionViewCell
         cell.itemSelected() // Set the desired color
-        
-        
+        let categories = Categories.getCategories()
+
+        viewModel.getData(foodTag:categories[indexPath.row].categorieKey)
         // Update the selectedIndexPath
         selectedIndexPath = indexPath
     }
     
     
 }
+extension HomeViewController: UITableViewDelegate,UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return meals.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell") as! RecipeCell
+        cell.chefName.text = meals[indexPath.row].credits?[0].name
+        cell.recipeName.text = meals[indexPath.row].credits?[0].name
+        return cell
+
+    }
+    
+    
+    
+    
+}
+
