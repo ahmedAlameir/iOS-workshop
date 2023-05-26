@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		043C5CF72A20FE45001FDA04 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C5CF52A20FE45001FDA04 /* RecipeCell.swift */; };
-		043C5CF82A20FE45001FDA04 /* RecipeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043C5CF62A20FE45001FDA04 /* RecipeCell.xib */; };
-		043C5CFB2A210BF0001FDA04 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 043C5CFA2A210BF0001FDA04 /* Poppins-Regular.ttf */; };
+		0E7592672A210253008231D6 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E7592662A210253008231D6 /* Colors.xcassets */; };
 		762EA3812A20C828009730BB /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EA3802A20C828009730BB /* Categories.swift */; };
 		762EA3862A20D022009730BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EA3852A20D022009730BB /* ViewController.swift */; };
 		762EA38E2A20E2B1009730BB /* FoodCategoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 762EA38C2A20E2B1009730BB /* FoodCategoriesCollectionViewCell.xib */; };
@@ -30,9 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		043C5CF52A20FE45001FDA04 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
-		043C5CF62A20FE45001FDA04 /* RecipeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeCell.xib; sourceTree = "<group>"; };
-		043C5CFA2A210BF0001FDA04 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		0E7592662A210253008231D6 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		11B62E1BE9531C3D959DDC71 /* Pods-iOS workshop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS workshop.release.xcconfig"; path = "Target Support Files/Pods-iOS workshop/Pods-iOS workshop.release.xcconfig"; sourceTree = "<group>"; };
 		3B936D3D4CBEDECAC3D713C0 /* Pods-iOS workshop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS workshop.debug.xcconfig"; path = "Target Support Files/Pods-iOS workshop/Pods-iOS workshop.debug.xcconfig"; sourceTree = "<group>"; };
 		762EA3802A20C828009730BB /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
@@ -69,23 +65,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		043C5CF22A20FD4E001FDA04 /* RecipeCell */ = {
-			isa = PBXGroup;
-			children = (
-				043C5CF52A20FE45001FDA04 /* RecipeCell.swift */,
-				043C5CF62A20FE45001FDA04 /* RecipeCell.xib */,
-			);
-			path = RecipeCell;
-			sourceTree = "<group>";
-		};
-		043C5CF92A210BF0001FDA04 /* Poppins */ = {
-			isa = PBXGroup;
-			children = (
-				043C5CFA2A210BF0001FDA04 /* Poppins-Regular.ttf */,
-			);
-			path = Poppins;
-			sourceTree = "<group>";
-		};
 		0E39D9202A209FD10005E141 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +72,7 @@
 				762EA3922A20F05A009730BB /* Favourites */,
 				762EA39B2A20F05A009730BB /* Home */,
 				762EA3A12A20F05A009730BB /* Tab */,
+				762EA3882A20DA45009730BB /* Details */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -100,7 +80,6 @@
 		0E39D9262A20A0670005E141 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				043C5CF22A20FD4E001FDA04 /* RecipeCell */,
 				762EA38B2A20E2B1009730BB /* Food Categories */,
 			);
 			path = Cells;
@@ -130,12 +109,12 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-		762EA37F2A20C7EA009730BB /* Model */ = {
+		762EA37F2A20C7EA009730BB /* Moble */ = {
 			isa = PBXGroup;
 			children = (
 				762EA3802A20C828009730BB /* Categories.swift */,
 			);
-			path = Model;
+			path = Moble;
 			sourceTree = "<group>";
 		};
 		762EA3822A20CDB2009730BB /* Custom View */ = {
@@ -160,8 +139,32 @@
 			children = (
 				765CFD9D2A1EB22600944D81 /* LaunchScreen.storyboard */,
 				765CFD9B2A1EB22600944D81 /* Assets.xcassets */,
+				0E7592662A210253008231D6 /* Colors.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		762EA3882A20DA45009730BB /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				762EA38A2A20DBB4009730BB /* ViewModle */,
+				762EA3892A20DBAD009730BB /* View */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		762EA3892A20DBAD009730BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		762EA38A2A20DBB4009730BB /* ViewModle */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModle;
 			sourceTree = "<group>";
 		};
 		762EA38B2A20E2B1009730BB /* Food Categories */ = {
@@ -279,11 +282,10 @@
 		765CFD912A1EB22100944D81 /* iOS workshop */ = {
 			isa = PBXGroup;
 			children = (
-				043C5CF92A210BF0001FDA04 /* Poppins */,
 				762EA3842A20CE6F009730BB /* Resources */,
 				762EA3832A20CDEA009730BB /* Application */,
 				762EA3822A20CDB2009730BB /* Custom View */,
-				762EA37F2A20C7EA009730BB /* Model */,
+				762EA37F2A20C7EA009730BB /* Moble */,
 				0E39D9272A20A0730005E141 /* Service */,
 				0E39D9202A209FD10005E141 /* Screens */,
 				765CFDA02A1EB22600944D81 /* Info.plist */,
@@ -364,10 +366,9 @@
 				762EA3A52A20F05A009730BB /* FavouritesViewController.xib in Resources */,
 				765CFD9C2A1EB22600944D81 /* Assets.xcassets in Resources */,
 				762EA38E2A20E2B1009730BB /* FoodCategoriesCollectionViewCell.xib in Resources */,
+				0E7592672A210253008231D6 /* Colors.xcassets in Resources */,
 				762EA3AB2A20F05A009730BB /* HomeTabBar.xib in Resources */,
 				762EA3A82A20F05A009730BB /* HomeViewController.xib in Resources */,
-				043C5CF82A20FE45001FDA04 /* RecipeCell.xib in Resources */,
-				043C5CFB2A210BF0001FDA04 /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,7 +427,6 @@
 				762EA3A42A20F05A009730BB /* FvaouritesViewModel.swift in Sources */,
 				762EA3862A20D022009730BB /* ViewController.swift in Sources */,
 				762EA3AA2A20F05A009730BB /* HomeTabBar.swift in Sources */,
-				043C5CF72A20FE45001FDA04 /* RecipeCell.swift in Sources */,
 				762EA3A92A20F05A009730BB /* HomeViewController.swift in Sources */,
 				765CFD932A1EB22100944D81 /* AppDelegate.swift in Sources */,
 				765CFD952A1EB22100944D81 /* SceneDelegate.swift in Sources */,
