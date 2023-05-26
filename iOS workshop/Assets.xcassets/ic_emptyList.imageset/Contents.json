@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "box transparant.svg",
+      "filename" : "no favourite place holder.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "no favourite place holder@2x.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "no favourite place holder@3x.svg",
       "idiom" : "universal",
       "scale" : "3x"
     }
