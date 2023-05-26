@@ -8,6 +8,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    var selectedIndexPath: IndexPath?
 
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     override func viewDidLoad() {
@@ -51,11 +52,24 @@ extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = categoryCollectionView.dequeueReusableCell(withReuseIdentifier: "FoodCategoriesCollectionViewCell", for: indexPath) as! FoodCategoriesCollectionViewCell
         let categories = Categories.getCategories()
-        let image =  categories[indexPath.row].categorieImage
         cell.categoriesImage.image  = UIImage(named: categories[indexPath.row].categorieImage)
         cell.categoriesName.text = categories[indexPath.row].categorieName
 
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let selectedIndexPath = selectedIndexPath{
+            let previousSelectedCell = collectionView.cellForItem(at: selectedIndexPath) as! FoodCategoriesCollectionViewCell
+            previousSelectedCell.itemUnSelected()// Reset the color to your default color
+        }
+        
+        // Update the color for the newly selected cell
+        let cell = collectionView.cellForItem(at: indexPath)as! FoodCategoriesCollectionViewCell
+        cell.itemSelected() // Set the desired color
+        
+        
+        // Update the selectedIndexPath
+        selectedIndexPath = indexPath
     }
     
     
