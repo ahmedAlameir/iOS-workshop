@@ -21,8 +21,8 @@ class HomeTabBar: UITabBarController {
     
     func setupVCs() {
             viewControllers = [
-                createNavController(for: HomeViewController(nibName: "HomeViewController",bundle: Bundle.main),  title: NSLocalizedString("", comment: ""), image: UIImage(named: "ic_homeIcon"),imageColored:UIImage(named: "ic_coloredHomeIcon" )),
-                createNavController(for:HomeViewController(nibName: "HomeViewController",bundle: Bundle.main), title: NSLocalizedString("Favourite", comment: ""), image: UIImage(named: "ic_favouriteIcon"),imageColored:UIImage(named: "ic_coloredFavouriteIcon")),
+                createNavController(for: HomeViewController(nibName: "HomeViewController",bundle: Bundle.main),  title: NSLocalizedString("Food Recipes", comment: ""), image: UIImage(named: "ic_homeIcon"),imageColored:UIImage(named: "ic_coloredHomeIcon" )),
+                createNavController(for:FavouritesViewController(nibName: "FavouritesViewController",bundle: Bundle.main), title: NSLocalizedString("Favourite", comment: ""), image: UIImage(named: "ic_favouriteIcon"),imageColored:UIImage(named: "ic_coloredFavouriteIcon")),
                 
             ]
         }

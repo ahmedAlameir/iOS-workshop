@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043C5CE92A20EC11001FDA04 /* FvaouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C5CE52A20EC11001FDA04 /* FvaouritesViewModel.swift */; };
+		043C5CEA2A20EC11001FDA04 /* FavouritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043C5CE72A20EC11001FDA04 /* FavouritesViewController.xib */; };
+		043C5CEB2A20EC11001FDA04 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C5CE82A20EC11001FDA04 /* FavouritesViewController.swift */; };
+		043C5CF12A20ED9C001FDA04 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C5CF02A20ED9C001FDA04 /* HomeViewModel.swift */; };
 		0E39D92A2A20A6560005E141 /* HomeTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E39D9282A20A6560005E141 /* HomeTabBar.swift */; };
 		0E39D92B2A20A6560005E141 /* HomeTabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E39D9292A20A6560005E141 /* HomeTabBar.xib */; };
 		0E7592572A20E586008231D6 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E7592552A20E586008231D6 /* HomeViewController.xib */; };
@@ -22,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		043C5CE52A20EC11001FDA04 /* FvaouritesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FvaouritesViewModel.swift; sourceTree = "<group>"; };
+		043C5CE72A20EC11001FDA04 /* FavouritesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavouritesViewController.xib; sourceTree = "<group>"; };
+		043C5CE82A20EC11001FDA04 /* FavouritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		043C5CF02A20ED9C001FDA04 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		0E39D9282A20A6560005E141 /* HomeTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBar.swift; sourceTree = "<group>"; };
 		0E39D9292A20A6560005E141 /* HomeTabBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabBar.xib; sourceTree = "<group>"; };
 		0E7592552A20E586008231D6 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -53,9 +61,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		043C5CE32A20EC11001FDA04 /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				043C5CE42A20EC11001FDA04 /* ViewModel */,
+				043C5CE62A20EC11001FDA04 /* View */,
+			);
+			path = Favourites;
+			sourceTree = "<group>";
+		};
+		043C5CE42A20EC11001FDA04 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				043C5CE52A20EC11001FDA04 /* FvaouritesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		043C5CE62A20EC11001FDA04 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				043C5CE72A20EC11001FDA04 /* FavouritesViewController.xib */,
+				043C5CE82A20EC11001FDA04 /* FavouritesViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		043C5CED2A20EC6A001FDA04 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				0E39D9282A20A6560005E141 /* HomeTabBar.swift */,
+				0E39D9292A20A6560005E141 /* HomeTabBar.xib */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		043C5CEE2A20ED51001FDA04 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				043C5CF02A20ED9C001FDA04 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		043C5CEF2A20ED64001FDA04 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0E7592562A20E586008231D6 /* HomeViewController.swift */,
+				0E7592552A20E586008231D6 /* HomeViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		0E39D9202A209FD10005E141 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				043C5CED2A20EC6A001FDA04 /* Tab */,
+				043C5CE32A20EC11001FDA04 /* Favourites */,
 				0E39D9212A209FDE0005E141 /* Home */,
 			);
 			path = Screens;
@@ -64,10 +126,8 @@
 		0E39D9212A209FDE0005E141 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				0E7592562A20E586008231D6 /* HomeViewController.swift */,
-				0E7592552A20E586008231D6 /* HomeViewController.xib */,
-				0E39D9282A20A6560005E141 /* HomeTabBar.swift */,
-				0E39D9292A20A6560005E141 /* HomeTabBar.xib */,
+				043C5CEF2A20ED64001FDA04 /* View */,
+				043C5CEE2A20ED51001FDA04 /* ViewModel */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -242,6 +302,7 @@
 			files = (
 				0E75925A2A20E7C1008231D6 /* Poppins in Resources */,
 				765CFD9F2A1EB22600944D81 /* LaunchScreen.storyboard in Resources */,
+				043C5CEA2A20EC11001FDA04 /* FavouritesViewController.xib in Resources */,
 				765CFD9C2A1EB22600944D81 /* Assets.xcassets in Resources */,
 				0E39D92B2A20A6560005E141 /* HomeTabBar.xib in Resources */,
 				0E7592572A20E586008231D6 /* HomeViewController.xib in Resources */,
@@ -297,7 +358,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043C5CEB2A20EC11001FDA04 /* FavouritesViewController.swift in Sources */,
+				043C5CF12A20ED9C001FDA04 /* HomeViewModel.swift in Sources */,
 				762EA3862A20D022009730BB /* ViewController.swift in Sources */,
+				043C5CE92A20EC11001FDA04 /* FvaouritesViewModel.swift in Sources */,
 				765CFD932A1EB22100944D81 /* AppDelegate.swift in Sources */,
 				0E39D92A2A20A6560005E141 /* HomeTabBar.swift in Sources */,
 				765CFD952A1EB22100944D81 /* SceneDelegate.swift in Sources */,

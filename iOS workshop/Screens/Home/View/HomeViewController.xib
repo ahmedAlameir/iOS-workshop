@@ -8,6 +8,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="iOS_workshop" customModuleProvider="target">
             <connections>
@@ -20,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="VMF-kV-Bwc">
-                    <rect key="frame" x="16" y="148" width="361" height="96"/>
+                    <rect key="frame" x="16" y="111" width="361" height="96"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="96" id="NJW-eP-RgM"/>
@@ -33,32 +38,24 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfp-cx-mCB">
-                    <rect key="frame" x="16" y="116" width="96" height="24"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <rect key="frame" x="15.999999999999993" y="75" width="110.33333333333331" height="28"/>
+                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aAV-H0-2Ks">
-                    <rect key="frame" x="16" y="303" width="361" height="434"/>
+                    <rect key="frame" x="16" y="266" width="361" height="471"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Recipes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMD-zo-plv">
-                    <rect key="frame" x="121" y="72" width="156" height="30"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="VMF-kV-Bwc" firstAttribute="top" secondItem="nfp-cx-mCB" secondAttribute="bottom" constant="8" symbolic="YES" id="07K-hp-CT0"/>
-                <constraint firstItem="BMD-zo-plv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="121" id="9jU-Ya-tih"/>
                 <constraint firstItem="nfp-cx-mCB" firstAttribute="leading" secondItem="aAV-H0-2Ks" secondAttribute="leading" id="SZQ-Zh-xCI"/>
-                <constraint firstItem="BMD-zo-plv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="13" id="SoO-BX-rcr"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="aAV-H0-2Ks" secondAttribute="bottom" constant="81" id="TER-WA-bXH"/>
                 <constraint firstItem="VMF-kV-Bwc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="V9h-RH-7EC"/>
-                <constraint firstItem="VMF-kV-Bwc" firstAttribute="top" secondItem="BMD-zo-plv" secondAttribute="bottom" constant="46" id="d0S-q8-XVa"/>
+                <constraint firstItem="nfp-cx-mCB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="equ-lK-NEP"/>
                 <constraint firstItem="nfp-cx-mCB" firstAttribute="leading" secondItem="VMF-kV-Bwc" secondAttribute="leading" id="hTc-er-K82"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VMF-kV-Bwc" secondAttribute="trailing" constant="16" id="rnm-Zy-Ye3"/>
                 <constraint firstItem="aAV-H0-2Ks" firstAttribute="top" secondItem="VMF-kV-Bwc" secondAttribute="bottom" constant="59" id="vNZ-Ir-1ES"/>
