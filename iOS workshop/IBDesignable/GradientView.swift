@@ -6,6 +6,7 @@
 //
 
 import UIKit
+@IBDesignable
 class GradientView: UIView {
     @IBInspectable var startColor: UIColor = .white {
         didSet {

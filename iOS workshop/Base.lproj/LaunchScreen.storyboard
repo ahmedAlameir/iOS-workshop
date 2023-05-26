@@ -20,12 +20,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="BdH-iP-pll">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erC-XJ-uHN">
-                                <rect key="frame" x="131" y="359" width="131" height="20"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -33,17 +27,14 @@
                             <constraint firstAttribute="bottom" secondItem="BdH-iP-pll" secondAttribute="bottom" id="2sb-zr-oOl"/>
                             <constraint firstItem="BdH-iP-pll" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="DiH-d6-tCs"/>
                             <constraint firstAttribute="trailing" secondItem="BdH-iP-pll" secondAttribute="trailing" id="EPb-xG-dl5"/>
-                            <constraint firstItem="erC-XJ-uHN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="131" id="GB3-Af-t0L"/>
-                            <constraint firstItem="erC-XJ-uHN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="R3w-ml-DXi"/>
                             <constraint firstItem="BdH-iP-pll" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="k72-he-TBv"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="erC-XJ-uHN" secondAttribute="trailing" constant="131" id="uo0-vm-YjR"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="393" height="852"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.671755725190835" y="374.64788732394368"/>
         </scene>
     </scenes>
     <resources>
