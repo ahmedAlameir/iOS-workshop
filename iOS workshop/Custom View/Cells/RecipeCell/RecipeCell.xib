@@ -28,8 +28,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ULB-Db-jWu">
                         <rect key="frame" x="16" y="24" width="41" height="41"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="a8x-Nw-NZ7">
-                                <rect key="frame" x="12" y="14" width="17" height="14"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_favIcon" translatesAutoresizingMaskIntoConstraints="NO" id="a8x-Nw-NZ7">
+                                <rect key="frame" x="12" y="12" width="17" height="17"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
@@ -132,8 +132,8 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="heart" catalog="system" width="128" height="107"/>
         <image name="ic_RecipeCell" width="383" height="174"/>
+        <image name="ic_favIcon" width="17" height="15"/>
         <image name="ic_servings" width="16" height="17"/>
         <image name="ic_typeFood" width="15" height="14"/>
     </resources>

@@ -64,8 +64,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "100"
             endingLineNumber = "100"
-            landmarkName = "HomeViewController"
-            landmarkType = "21">
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "CCEE5746-F0A6-4848-AB38-02BA939A6633 - a01cb27a0f158403"

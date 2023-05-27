@@ -107,6 +107,10 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource{
         return cell
 
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       let detailsVC = MealDetailsViewController(nibName: "MealDetailsViewController", bundle: nil)
+        self.navigationController?.pushViewController(detailsVC, animated: true)
+    }
     
     
     
