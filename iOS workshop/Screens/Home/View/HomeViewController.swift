@@ -10,6 +10,7 @@ import UIKit
 class HomeViewController: UIViewController {
     var selectedIndexPath: IndexPath?
     var meals : [Meal] = []
+    var favMeals : [Int : Bool] = [:]
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     let viewModel = HomeVIewModel()
@@ -23,6 +24,7 @@ class HomeViewController: UIViewController {
     }
 
     private func configureTableView() {
+
         tableview.delegate = self
         tableview.dataSource = self
         tableview.separatorStyle = .none
@@ -66,8 +68,23 @@ class HomeViewController: UIViewController {
             guard let meals = meal else {
                 return
             }
-            self?.meals = meals.map { $0 }
+            self?.meals = meals
             self?.tableview.reloadData()
+        }
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getFavItems()
+        tableview.reloadData()
+    }
+    
+    func getFavItems(){
+        favMeals = [:]
+        for i in  viewModel.getDataFormDataBase() {
+            if let showID = i.id {
+                favMeals[showID] = true
+            }
         }
     }
 
@@ -83,9 +100,11 @@ class HomeViewController: UIViewController {
 
 }
 extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource{
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return Categories.getCategories().count
     }
+
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = categoryCollectionView.dequeueReusableCell(withReuseIdentifier: "FoodCategoriesCollectionViewCell", for: indexPath) as! FoodCategoriesCollectionViewCell
@@ -125,14 +144,25 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell") as! RecipeCell
-        cell.initializeCell(meal: meals[indexPath.row])
-        
+        let meal = meals[indexPath.row]
+                print("x")
+        if let id = meal.id{
+            cell.initializeCell(meal: meal,Favourite: favMeals[id] != nil ){
+                [weak self] in
+                if(self?.favMeals[id] == nil){
+                    self?.viewModel.saveMeal(withData: meal)
+                    cell.changeImage(true)
+                }
+                else {
+                    self?.viewModel.deleteMeal(withId: id)
+                    cell.changeImage(false)
+                }
+                    self?.getFavItems()
+            }
+        }
         return cell
 
     }
-    
-    
-    
     
 }
 
