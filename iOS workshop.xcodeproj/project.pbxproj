@@ -12,6 +12,8 @@
 		0E7592672A210253008231D6 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E7592662A210253008231D6 /* Colors.xcassets */; };
 		0EC8E5CD2A211A4400A8EEB7 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC8E5CC2A211A4400A8EEB7 /* Observable.swift */; };
 		0EC8E5CF2A211D3E00A8EEB7 /* VIewStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC8E5CE2A211D3E00A8EEB7 /* VIewStructs.swift */; };
+		760AE5F82A21E6A200BD6D36 /* Meal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 760AE5F62A21E6A200BD6D36 /* Meal.xcdatamodeld */; };
+		760AE5FA2A21EE9C00BD6D36 /* DataBaseManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760AE5F92A21EE9C00BD6D36 /* DataBaseManger.swift */; };
 		762EA3862A20D022009730BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EA3852A20D022009730BB /* ViewController.swift */; };
 		762EA38E2A20E2B1009730BB /* FoodCategoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 762EA38C2A20E2B1009730BB /* FoodCategoriesCollectionViewCell.xib */; };
 		762EA38F2A20E2B1009730BB /* FoodCategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EA38D2A20E2B1009730BB /* FoodCategoriesCollectionViewCell.swift */; };
@@ -41,6 +43,8 @@
 		0EC8E5CE2A211D3E00A8EEB7 /* VIewStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIewStructs.swift; sourceTree = "<group>"; };
 		11B62E1BE9531C3D959DDC71 /* Pods-iOS workshop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS workshop.release.xcconfig"; path = "Target Support Files/Pods-iOS workshop/Pods-iOS workshop.release.xcconfig"; sourceTree = "<group>"; };
 		3B936D3D4CBEDECAC3D713C0 /* Pods-iOS workshop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS workshop.debug.xcconfig"; path = "Target Support Files/Pods-iOS workshop/Pods-iOS workshop.debug.xcconfig"; sourceTree = "<group>"; };
+		760AE5F72A21E6A200BD6D36 /* Meal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Meal.xcdatamodel; sourceTree = "<group>"; };
+		760AE5F92A21EE9C00BD6D36 /* DataBaseManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataBaseManger.swift; path = "iOS workshop/DataBaseManger.swift"; sourceTree = SOURCE_ROOT; };
 		762EA3852A20D022009730BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		762EA38C2A20E2B1009730BB /* FoodCategoriesCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodCategoriesCollectionViewCell.xib; sourceTree = "<group>"; };
 		762EA38D2A20E2B1009730BB /* FoodCategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				762EA3B42A211767009730BB /* MealAPI.swift */,
+				760AE5F92A21EE9C00BD6D36 /* DataBaseManger.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -324,6 +329,7 @@
 				0E39D9202A209FD10005E141 /* Screens */,
 				765CFDA02A1EB22600944D81 /* Info.plist */,
 				762EA3852A20D022009730BB /* ViewController.swift */,
+				760AE5F62A21E6A200BD6D36 /* Meal.xcdatamodeld */,
 			);
 			path = "iOS workshop";
 			sourceTree = "<group>";
@@ -464,7 +470,9 @@
 				762EA3A72A20F05A009730BB /* HomeViewModel.swift in Sources */,
 				762EA38F2A20E2B1009730BB /* FoodCategoriesCollectionViewCell.swift in Sources */,
 				762EA3A42A20F05A009730BB /* FvaouritesViewModel.swift in Sources */,
+				760AE5F82A21E6A200BD6D36 /* Meal.xcdatamodeld in Sources */,
 				762EA3862A20D022009730BB /* ViewController.swift in Sources */,
+				760AE5FA2A21EE9C00BD6D36 /* DataBaseManger.swift in Sources */,
 				762EA3AA2A20F05A009730BB /* HomeTabBar.swift in Sources */,
 				043C5CFF2A2117AE001FDA04 /* RecipeCell.swift in Sources */,
 				762EA3A92A20F05A009730BB /* HomeViewController.swift in Sources */,
@@ -682,6 +690,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		760AE5F62A21E6A200BD6D36 /* Meal.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				760AE5F72A21E6A200BD6D36 /* Meal.xcdatamodel */,
+			);
+			currentVersion = 760AE5F72A21E6A200BD6D36 /* Meal.xcdatamodel */;
+			path = Meal.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 765CFD872A1EB22100944D81 /* Project object */;
 }
