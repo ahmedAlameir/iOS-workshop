@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
         
         tableview.delegate = self
         tableview.dataSource = self
+        tableview.separatorStyle = .none
         
         categoryCollectionView.register(UINib(nibName: "FoodCategoriesCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "FoodCategoriesCollectionViewCell")
         

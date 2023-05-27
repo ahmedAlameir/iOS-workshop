@@ -33,7 +33,7 @@ class RecipeCell: UITableViewCell {
         
         mealImage.clipsToBounds = true
 
-        mealImage.layer.cornerRadius = favBackgroundView.frame.width / 10
+        mealImage.layer.cornerRadius = mealImage.frame.height / 10
         
     }
 
@@ -44,6 +44,7 @@ class RecipeCell: UITableViewCell {
         
     }
     func initializeCell(meal : Meal){
+        
         recipeName.text = meal.name
         chefName.text = meal.credits?[0].name ?? "None"
         foodTypeName.text = meal.credits?[0].type ?? "None"
