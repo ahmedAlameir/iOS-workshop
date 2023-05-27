@@ -35,10 +35,11 @@ class DatabaseManager {
         let mealEntity = MealEntity(entity: entity, insertInto: managedObjectContext)
         mealEntity.chefName = data.credits?.first?.name
         mealEntity.foodType = data.credits?.first?.type
-        mealEntity.mealImage = data.thumbnail_url
+        mealEntity.mealImage = data.thumbnailURL
         mealEntity.mealName = data.name
-        mealEntity.servingsNumber = Int32(data.num_servings ?? 0 )
         mealEntity.id =  Int32(data.id ?? 0)
+        mealEntity.servingsNumber = Int32(data.numServings ?? 0 )
+  
         
         saveContext()
     }
@@ -53,11 +54,12 @@ class DatabaseManager {
             return mealEntities.map { mealEntity in
                 Meal(
                     id: Int(  mealEntity.id ),
+
                     name: mealEntity.mealName,
                     credits: [Credit(name: mealEntity.chefName, type: mealEntity.foodType)],
-                    thumbnail_url: mealEntity.mealImage,
-                    video_url: nil,
-                    num_servings: Int(  mealEntity.servingsNumber ),
+                    thumbnailURL: mealEntity.mealImage,
+                    videoURL:  nil,
+                    numServings: Int(  mealEntity.servingsNumber ),
                     instructions: nil,
                     tags: nil
                 )

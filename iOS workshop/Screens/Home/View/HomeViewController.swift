@@ -16,38 +16,55 @@ class HomeViewController: UIViewController {
     let viewModel = HomeVIewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureTableView()
+           configureCategoryCollectionView()
+           configureNavigationBar()
+           fetchDataAndUpdateUI()
+        // Do any additional setup after loading the view.
+    }
+
+    private func configureTableView() {
+
         tableview.delegate = self
         tableview.dataSource = self
         tableview.separatorStyle = .none
         
-        categoryCollectionView.register(UINib(nibName: "FoodCategoriesCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "FoodCategoriesCollectionViewCell")
-        
         tableview.register(UINib(nibName: "RecipeCell", bundle: .main), forCellReuseIdentifier: "RecipeCell")
+    }
+
+    // Method to configure the category collection view
+    private func configureCategoryCollectionView() {
+        categoryCollectionView.register(UINib(nibName: "FoodCategoriesCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "FoodCategoriesCollectionViewCell")
         
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
         
-        let layeout = UICollectionViewFlowLayout()
-        layeout.itemSize = CGSize(width: 72, height: 96)
-        layeout.scrollDirection = .horizontal
-        layeout.minimumInteritemSpacing = 0
-        layeout.minimumLineSpacing = 5
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: 72, height: 96)
+        layout.scrollDirection = .horizontal
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 5
         
+        categoryCollectionView.collectionViewLayout = layout
+    }
+
+    // Method to configure the navigation bar
+    private func configureNavigationBar() {
         let titleLabel = UILabel()
-          titleLabel.text = "Food Recipes"
-          titleLabel.textAlignment = .center
-          titleLabel.font = UIFont.boldSystemFont(ofSize: 24) // Customize the font if needed
-          titleLabel.sizeToFit()
+        titleLabel.text = "Food Recipes"
+        titleLabel.textAlignment = .center
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 24) // Customize the font if needed
+        titleLabel.sizeToFit()
         navigationItem.titleView = titleLabel
         
         navigationItem.largeTitleDisplayMode = .never
+    }
 
-        
-        categoryCollectionView.collectionViewLayout = layeout
-        
+    // Method to fetch and reload data
+    private func fetchDataAndUpdateUI() {
         viewModel.getData(foodTag: Categories.getCategories()[0].categorieKey)
         
-        viewModel.cellDataSource.bind(){ [weak self] meal in
+        viewModel.cellDataSource.bind() { [weak self] meal in
             guard let meals = meal else {
                 return
             }
@@ -91,9 +108,8 @@ extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = categoryCollectionView.dequeueReusableCell(withReuseIdentifier: "FoodCategoriesCollectionViewCell", for: indexPath) as! FoodCategoriesCollectionViewCell
-        let categories = Categories.getCategories()
-        cell.categoriesImage.image  = UIImage(named: categories[indexPath.row].categorieImage)
-        cell.categoriesName.text = categories[indexPath.row].categorieName
+        let categorie = Categories.getCategories()[indexPath.row]
+        cell.configure(with: categorie)
 
         if(indexPath.row == 0){
             cell.itemSelected() // Set the desired color
