@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="120" id="KGk-i7-Jjw" customClass="RecipeCell" customModule="iOS_workshop" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="366" height="155"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="366" height="155"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_RecipeCell" translatesAutoresizingMaskIntoConstraints="NO" id="f1H-hp-m0e">
+                        <rect key="frame" x="0.0" y="8" width="366" height="140"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="140" id="iDA-eC-AHs"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ULB-Db-jWu">
+                        <rect key="frame" x="16" y="24" width="41" height="41"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="a8x-Nw-NZ7">
+                                <rect key="frame" x="12" y="14" width="17" height="14"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.81176471709999998" green="0.60000002379999995" blue="0.36470589040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="a8x-Nw-NZ7" firstAttribute="top" secondItem="ULB-Db-jWu" secondAttribute="top" constant="12" id="JOG-34-fDI"/>
+                            <constraint firstAttribute="trailing" secondItem="a8x-Nw-NZ7" secondAttribute="trailing" constant="12" id="LIK-gf-bWM"/>
+                            <constraint firstItem="a8x-Nw-NZ7" firstAttribute="leading" secondItem="ULB-Db-jWu" secondAttribute="leading" constant="12" id="NlX-e5-ll6"/>
+                            <constraint firstAttribute="height" constant="41" id="U30-kI-aJd"/>
+                            <constraint firstAttribute="width" constant="41" id="bUA-8O-YFA"/>
+                            <constraint firstAttribute="bottom" secondItem="a8x-Nw-NZ7" secondAttribute="bottom" constant="12" id="mQU-HP-eVL"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labesdfsfsl" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="un8-3w-YFn">
+                        <rect key="frame" x="246" y="28" width="100" height="16.333333333333329"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="QG5-As-SQG"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVl-4b-kvq">
+                        <rect key="frame" x="246" y="54.333333333333336" width="100" height="11.666666666666664"/>
+                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="10"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_typeFood" translatesAutoresizingMaskIntoConstraints="NO" id="T3K-Hx-39B">
+                        <rect key="frame" x="246" y="81" width="15" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="If8-zO-ZpT"/>
+                            <constraint firstAttribute="width" constant="15" id="bNB-2h-19B"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_servings" translatesAutoresizingMaskIntoConstraints="NO" id="pJs-9l-ZK8">
+                        <rect key="frame" x="246" y="110" width="15" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="AOe-SP-NMh"/>
+                            <constraint firstAttribute="width" constant="15" id="Ada-eA-lkx"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTA-Nb-xlv">
+                        <rect key="frame" x="276" y="81" width="66" height="14"/>
+                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="10"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="servings:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9D-sN-gtb">
+                        <rect key="frame" x="276" y="110" width="40.333333333333314" height="14"/>
+                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="10"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fM4-2u-vSX">
+                        <rect key="frame" x="318.33333333333331" y="110" width="6.3333333333333144" height="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="T3K-Hx-39B" firstAttribute="leading" secondItem="EVl-4b-kvq" secondAttribute="leading" id="1wv-I9-WiL"/>
+                    <constraint firstItem="T3K-Hx-39B" firstAttribute="top" secondItem="EVl-4b-kvq" secondAttribute="bottom" constant="15" id="AIS-E1-Zcr"/>
+                    <constraint firstItem="fM4-2u-vSX" firstAttribute="bottom" secondItem="i9D-sN-gtb" secondAttribute="bottom" id="Al3-D5-VLE"/>
+                    <constraint firstItem="i9D-sN-gtb" firstAttribute="top" secondItem="pJs-9l-ZK8" secondAttribute="top" id="FDW-w4-UTK"/>
+                    <constraint firstItem="i9D-sN-gtb" firstAttribute="leading" secondItem="pJs-9l-ZK8" secondAttribute="trailing" constant="15" id="FeI-V1-7Bz"/>
+                    <constraint firstItem="f1H-hp-m0e" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="HqN-WM-gTk"/>
+                    <constraint firstItem="un8-3w-YFn" firstAttribute="top" secondItem="f1H-hp-m0e" secondAttribute="top" constant="20" id="L4w-MM-HTR"/>
+                    <constraint firstItem="QTA-Nb-xlv" firstAttribute="bottom" secondItem="T3K-Hx-39B" secondAttribute="bottom" id="MUc-TS-SrV"/>
+                    <constraint firstItem="QTA-Nb-xlv" firstAttribute="top" secondItem="T3K-Hx-39B" secondAttribute="top" id="RL8-Wp-zf2"/>
+                    <constraint firstItem="f1H-hp-m0e" firstAttribute="trailingMargin" secondItem="QTA-Nb-xlv" secondAttribute="trailing" constant="16" id="SGF-PU-p8r"/>
+                    <constraint firstItem="f1H-hp-m0e" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="U9V-T5-jJc"/>
+                    <constraint firstItem="ULB-Db-jWu" firstAttribute="top" secondItem="f1H-hp-m0e" secondAttribute="top" constant="16" id="Y4B-Nu-bqn"/>
+                    <constraint firstItem="ULB-Db-jWu" firstAttribute="leading" secondItem="f1H-hp-m0e" secondAttribute="leading" constant="16" id="dxd-0d-PT4"/>
+                    <constraint firstAttribute="bottom" secondItem="f1H-hp-m0e" secondAttribute="bottom" constant="8" id="fIN-8x-hRs"/>
+                    <constraint firstItem="EVl-4b-kvq" firstAttribute="trailing" secondItem="un8-3w-YFn" secondAttribute="trailing" id="g3B-oN-E3j"/>
+                    <constraint firstItem="pJs-9l-ZK8" firstAttribute="leading" secondItem="T3K-Hx-39B" secondAttribute="leading" id="jXq-wr-ees"/>
+                    <constraint firstItem="un8-3w-YFn" firstAttribute="trailing" secondItem="f1H-hp-m0e" secondAttribute="trailing" constant="-20" id="lCy-c4-zxw"/>
+                    <constraint firstItem="pJs-9l-ZK8" firstAttribute="top" secondItem="T3K-Hx-39B" secondAttribute="bottom" constant="15" id="lHR-Hp-nyG"/>
+                    <constraint firstItem="QTA-Nb-xlv" firstAttribute="leading" secondItem="T3K-Hx-39B" secondAttribute="trailing" constant="15" id="mi0-YB-47a"/>
+                    <constraint firstItem="fM4-2u-vSX" firstAttribute="leading" secondItem="i9D-sN-gtb" secondAttribute="trailing" constant="2" id="pzf-wC-P9f"/>
+                    <constraint firstAttribute="trailing" secondItem="f1H-hp-m0e" secondAttribute="trailing" id="sVd-XG-ac5"/>
+                    <constraint firstItem="fM4-2u-vSX" firstAttribute="top" secondItem="i9D-sN-gtb" secondAttribute="top" id="ucL-Hf-Ui7"/>
+                    <constraint firstItem="EVl-4b-kvq" firstAttribute="leading" secondItem="un8-3w-YFn" secondAttribute="leading" id="vvy-NT-mZf"/>
+                    <constraint firstItem="EVl-4b-kvq" firstAttribute="top" secondItem="un8-3w-YFn" secondAttribute="bottom" constant="10" id="x8X-r1-JsS"/>
+                    <constraint firstItem="i9D-sN-gtb" firstAttribute="bottom" secondItem="pJs-9l-ZK8" secondAttribute="bottom" id="yWW-1x-KXD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="chefName" destination="EVl-4b-kvq" id="RW7-pL-llW"/>
+                <outlet property="favBackgroundView" destination="ULB-Db-jWu" id="2bH-dY-7hc"/>
+                <outlet property="favImage" destination="a8x-Nw-NZ7" id="Fvq-rp-jYD"/>
+                <outlet property="foodTypeName" destination="QTA-Nb-xlv" id="GnD-mO-dv2"/>
+                <outlet property="mealImage" destination="f1H-hp-m0e" id="CuF-Gx-82T"/>
+                <outlet property="recipeName" destination="un8-3w-YFn" id="O92-Pj-yUb"/>
+                <outlet property="servingsNumber" destination="fM4-2u-vSX" id="AAc-yw-Wrc"/>
+            </connections>
+            <point key="canvasLocation" x="87.022900763358777" y="36.267605633802816"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="ic_RecipeCell" width="383" height="174"/>
+        <image name="ic_servings" width="16" height="17"/>
+        <image name="ic_typeFood" width="15" height="14"/>
+    </resources>
+</document>
