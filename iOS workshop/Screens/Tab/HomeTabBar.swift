@@ -13,15 +13,17 @@ class HomeTabBar: UITabBarController {
         super.viewDidLoad()
         
         view.backgroundColor = .systemBackground
-           UITabBar.appearance().barTintColor = .systemBackground
-        tabBar.tintColor = hexStringToUIColor(hex:"#D99651")
-        
-           setupVCs()
+       
+        setUpTabBar()
+        setupVCs()
 
 
         // Do any additional setup after loading the view.
     }
-   
+   func setUpTabBar(){
+        UITabBar.appearance().barTintColor = .systemBackground
+     tabBar.tintColor = hexStringToUIColor(hex:"#D99651")
+    }
 
     func hexStringToUIColor (hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()

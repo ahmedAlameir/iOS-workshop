@@ -48,8 +48,8 @@ class RecipeCell: UITableViewCell {
         recipeName.text = meal.name
         chefName.text = meal.credits?[0].name ?? "None"
         foodTypeName.text = meal.credits?[0].type ?? "None"
-        servingsNumber.text = String(meal.num_servings ?? 0)
-        mealImage.sd_setImage(with: URL(string: meal.thumbnail_url ?? ""), placeholderImage : UIImage(named: "ic_RecipeCell"))
+        servingsNumber.text = String(meal.numServings ?? 0)
+        mealImage.sd_setImage(with: URL(string: meal.thumbnailURL ?? ""), placeholderImage : UIImage(named: "ic_RecipeCell"))
         }
     
 }
