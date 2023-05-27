@@ -18,29 +18,40 @@ class HomeViewController: UIViewController {
         
         tableview.delegate = self
         tableview.dataSource = self
+        tableview.separatorStyle = .none
         
         categoryCollectionView.register(UINib(nibName: "FoodCategoriesCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "FoodCategoriesCollectionViewCell")
+        
         tableview.register(UINib(nibName: "RecipeCell", bundle: .main), forCellReuseIdentifier: "RecipeCell")
+        
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
+        
         let layeout = UICollectionViewFlowLayout()
         layeout.itemSize = CGSize(width: 72, height: 96)
         layeout.scrollDirection = .horizontal
         layeout.minimumInteritemSpacing = 0
         layeout.minimumLineSpacing = 5
+        
         let titleLabel = UILabel()
           titleLabel.text = "Food Recipes"
           titleLabel.textAlignment = .center
           titleLabel.font = UIFont.boldSystemFont(ofSize: 24) // Customize the font if needed
           titleLabel.sizeToFit()
         navigationItem.titleView = titleLabel
+        
+        navigationItem.largeTitleDisplayMode = .never
+
+        
         categoryCollectionView.collectionViewLayout = layeout
+        
         viewModel.getData(foodTag: Categories.getCategories()[0].categorieKey)
+        
         viewModel.cellDataSource.bind(){ [weak self] meal in
             guard let meals = meal else {
                 return
             }
-            self?.meals = meals
+            self?.meals = meals.map{ $0 }
             self?.tableview.reloadData()
         }
         // Do any additional setup after loading the view.
@@ -102,8 +113,8 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell") as! RecipeCell
-        cell.chefName.text = meals[indexPath.row].credits?[0].name
-        cell.recipeName.text = meals[indexPath.row].credits?[0].name
+        cell.initializeCell(meal: meals[indexPath.row])
+        
         return cell
 
     }

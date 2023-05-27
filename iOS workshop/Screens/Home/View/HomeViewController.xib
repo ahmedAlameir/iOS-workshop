@@ -26,8 +26,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="VMF-kV-Bwc">
-                    <rect key="frame" x="16" y="95.5" width="382" height="96"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="VMF-kV-Bwc">
+                    <rect key="frame" x="16" y="79.5" width="382" height="96"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="96" id="NJW-eP-RgM"/>
@@ -40,13 +40,13 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfp-cx-mCB">
-                    <rect key="frame" x="16" y="64" width="97.5" height="23.5"/>
+                    <rect key="frame" x="16" y="48" width="97.5" height="23.5"/>
                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aAV-H0-2Ks">
-                    <rect key="frame" x="16" y="250.5" width="382" height="530.5"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aAV-H0-2Ks">
+                    <rect key="frame" x="16" y="191.5" width="382" height="654.5"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
@@ -55,12 +55,12 @@
             <constraints>
                 <constraint firstItem="VMF-kV-Bwc" firstAttribute="top" secondItem="nfp-cx-mCB" secondAttribute="bottom" constant="8" symbolic="YES" id="07K-hp-CT0"/>
                 <constraint firstItem="nfp-cx-mCB" firstAttribute="leading" secondItem="aAV-H0-2Ks" secondAttribute="leading" id="SZQ-Zh-xCI"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="aAV-H0-2Ks" secondAttribute="bottom" constant="81" id="TER-WA-bXH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="aAV-H0-2Ks" secondAttribute="bottom" constant="16" id="TER-WA-bXH"/>
                 <constraint firstItem="VMF-kV-Bwc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="V9h-RH-7EC"/>
-                <constraint firstItem="nfp-cx-mCB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="equ-lK-NEP"/>
+                <constraint firstItem="nfp-cx-mCB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="equ-lK-NEP"/>
                 <constraint firstItem="nfp-cx-mCB" firstAttribute="leading" secondItem="VMF-kV-Bwc" secondAttribute="leading" id="hTc-er-K82"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VMF-kV-Bwc" secondAttribute="trailing" constant="16" id="rnm-Zy-Ye3"/>
-                <constraint firstItem="aAV-H0-2Ks" firstAttribute="top" secondItem="VMF-kV-Bwc" secondAttribute="bottom" constant="59" id="vNZ-Ir-1ES"/>
+                <constraint firstItem="aAV-H0-2Ks" firstAttribute="top" secondItem="VMF-kV-Bwc" secondAttribute="bottom" constant="16" id="vNZ-Ir-1ES"/>
                 <constraint firstItem="aAV-H0-2Ks" firstAttribute="trailing" secondItem="VMF-kV-Bwc" secondAttribute="trailing" id="ynf-Ih-FKa"/>
             </constraints>
             <point key="canvasLocation" x="138" y="-71"/>

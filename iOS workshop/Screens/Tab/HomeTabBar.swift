@@ -47,17 +47,15 @@ class HomeTabBar: UITabBarController {
     }
     func setupVCs() {
             viewControllers = [
-                createNavController(for: HomeViewController(nibName: "HomeViewController",bundle: Bundle.main),  title: NSLocalizedString("Food Recipes", comment: ""), image: UIImage(named: "ic_homeIcon"),imageColored:UIImage(named: "ic_coloredHomeIcon" )),
-                createNavController(for:FavouritesViewController(nibName: "FavouritesViewController",bundle: Bundle.main), title: NSLocalizedString("Favourite", comment: ""), image: UIImage(named: "ic_favouriteIcon"),imageColored:UIImage(named: "ic_coloredFavouriteIcon")),
+                createNavController(for: HomeViewController(nibName: "HomeViewController",bundle: Bundle.main), image: UIImage(named: "ic_homeIcon"),imageColored:UIImage(named: "ic_coloredHomeIcon" )),
+                createNavController(for:FavouritesViewController(nibName: "FavouritesViewController",bundle: Bundle.main), image: UIImage(named: "ic_favouriteIcon"),imageColored:UIImage(named: "ic_coloredFavouriteIcon")),
                 
             ]
         }
 
     fileprivate func createNavController(for rootViewController: UIViewController,
-                                                      title: String,
                                          image: UIImage?,imageColored:UIImage?) -> UIViewController {
             let navController = UINavigationController(rootViewController: rootViewController)
-            navController.tabBarItem.title = title
             navController.tabBarItem.image = image
         navController.tabBarItem.selectedImage = imageColored
             navController.navigationBar.prefersLargeTitles = true
