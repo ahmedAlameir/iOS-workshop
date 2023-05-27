@@ -19,8 +19,8 @@ struct Meal: Decodable {
     var videoURL: String?
     var numServings: Int?
     var instructions: [Instruction]?
-    var tags: [Ingredient]?
-    
+    let sections: [RecipeSection]?
+
     enum CodingKeys: String, CodingKey {
         case showId = "show_id"
         case name
@@ -50,17 +50,23 @@ struct Instruction: Decodable {
         case displayText = "display_text"
     }
 }
-
-struct Ingredient: Decodable {
-    var displayName: String?
-    var type: String?
-    
-    enum CodingKeys: String, CodingKey {
-        case displayName = "display_name"
-        case type
-    }
+struct RecipeSection:Decodable {
+    let components: [RecipeComponent]
 }
-
+struct RecipeComponent:Decodable {
+    let ingredient: Ingredient
+    let measurements: [Measurement]
+}
+struct Ingredient:Decodable  {
+    let name: String
+}
+struct Measurement :Decodable{
+    let quantity: String
+    let unit: Unit
+}
+struct Unit :Decodable{
+    let name: String
+}
 // Add initializers for the structs
 extension Meal {
     init(from decoder: Decoder) throws {

@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-class FoodApi {
+class FoodApi:FoodApiProtocol {
     
     func fetchFood(foodTag:String , completionHandler: @escaping (Result<[Meal]?, Error>) -> Void) {
         let headers: HTTPHeaders = [

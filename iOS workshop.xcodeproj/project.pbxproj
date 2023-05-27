@@ -36,6 +36,7 @@
 		765CFD9C2A1EB22600944D81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 765CFD9B2A1EB22600944D81 /* Assets.xcassets */; };
 		765CFD9F2A1EB22600944D81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 765CFD9D2A1EB22600944D81 /* LaunchScreen.storyboard */; };
 		7698C9282A22103A00B928B1 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7698C9272A22103900B928B1 /* DetailsViewModel.swift */; };
+		7698C92A2A222F7A00B928B1 /* FoodApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7698C9292A222F7A00B928B1 /* FoodApiProtocol.swift */; };
 		984D004392E6451BECADC08E /* Pods_iOS_workshop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F58BA2446C75D237727A3C /* Pods_iOS_workshop.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		765CFD9E2A1EB22600944D81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		765CFDA02A1EB22600944D81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7698C9272A22103900B928B1 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		7698C9292A222F7A00B928B1 /* FoodApiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoodApiProtocol.swift; path = "iOS workshop/Screens/Details/ViewModle/FoodApiProtocol.swift"; sourceTree = SOURCE_ROOT; };
 		76F06A4A2A20A48500144743 /* FoodCategoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodCategoriesCollectionViewCell.xib; sourceTree = "<group>"; };
 		A9F58BA2446C75D237727A3C /* Pods_iOS_workshop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_workshop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -133,6 +135,7 @@
 			children = (
 				762EA3B42A211767009730BB /* MealAPI.swift */,
 				760AE5F92A21EE9C00BD6D36 /* DataBaseManger.swift */,
+				7698C9292A222F7A00B928B1 /* FoodApiProtocol.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 				760AE5F82A21E6A200BD6D36 /* Meal.xcdatamodeld in Sources */,
 				762EA3862A20D022009730BB /* ViewController.swift in Sources */,
 				760AE5FA2A21EE9C00BD6D36 /* DataBaseManger.swift in Sources */,
+				7698C92A2A222F7A00B928B1 /* FoodApiProtocol.swift in Sources */,
 				762EA3AA2A20F05A009730BB /* HomeTabBar.swift in Sources */,
 				043C5CFF2A2117AE001FDA04 /* RecipeCell.swift in Sources */,
 				762EA3A92A20F05A009730BB /* HomeViewController.swift in Sources */,
