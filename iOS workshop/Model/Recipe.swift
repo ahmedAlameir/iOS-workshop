@@ -20,8 +20,8 @@ struct Meal: Decodable {
     var videoURL: String?
     var numServings: Int?
     var instructions: [Instruction]?
-    let sections: [RecipeSection]?
-
+    var sections: [RecipeSection]?
+    var tags:[Ingredient]?
     enum CodingKeys: String, CodingKey {
         case id
 
@@ -31,9 +31,10 @@ struct Meal: Decodable {
         case videoURL = "video_url"
         case numServings = "num_servings"
         case instructions
-        case tags
+        case sections
     }
 }
+
 
 struct Credit: Decodable {
     var name: String?
@@ -53,21 +54,22 @@ struct Instruction: Decodable {
     }
 }
 struct RecipeSection:Decodable {
-    let components: [RecipeComponent]
+    var position:Int
+    var components: [RecipeComponent]
 }
 struct RecipeComponent:Decodable {
-    let ingredient: Ingredient
-    let measurements: [Measurement]
+    var ingredient: Ingredient
+    var measurements: [Measurement]
 }
 struct Ingredient:Decodable  {
-    let name: String
+    var name: String
 }
 struct Measurement :Decodable{
-    let quantity: String
-    let unit: Unit
+    var quantity: String
+    var unit: Unit
 }
 struct Unit :Decodable{
-    let name: String
+    var name: String
 }
 // Add initializers for the structs
 extension Meal {
@@ -81,7 +83,7 @@ extension Meal {
         videoURL = try container.decodeIfPresent(String.self, forKey: .videoURL)
         numServings = try container.decodeIfPresent(Int.self, forKey: .numServings)
         instructions = try container.decodeIfPresent([Instruction].self, forKey: .instructions)
-        tags = try container.decodeIfPresent([Ingredient].self, forKey: .tags)
+        sections = try container.decodeIfPresent([RecipeSection].self, forKey: .sections)
     }
 }
 
@@ -100,10 +102,4 @@ extension Instruction {
     }
 }
 
-extension Ingredient {
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        displayName = try container.decodeIfPresent(String.self, forKey: .displayName)
-        type = try container.decodeIfPresent(String.self, forKey: .type)
-    }
-}
+

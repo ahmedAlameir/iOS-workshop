@@ -37,8 +37,22 @@
 		765CFD9F2A1EB22600944D81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 765CFD9D2A1EB22600944D81 /* LaunchScreen.storyboard */; };
 		7698C9282A22103A00B928B1 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7698C9272A22103900B928B1 /* DetailsViewModel.swift */; };
 		7698C92A2A222F7A00B928B1 /* FoodApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7698C9292A222F7A00B928B1 /* FoodApiProtocol.swift */; };
+		7698C9342A224F2700B928B1 /* iOS_workshopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7698C9332A224F2700B928B1 /* iOS_workshopTests.swift */; };
+		7698C93B2A224F7D00B928B1 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7698C93A2A224F7D00B928B1 /* HomeViewModelTests.swift */; };
+		7698C93D2A224FD400B928B1 /* FakeFoodApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7698C93C2A224FD400B928B1 /* FakeFoodApi.swift */; };
+		7698C93F2A22513500B928B1 /* FoodApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7698C93E2A22513500B928B1 /* FoodApiTests.swift */; };
 		984D004392E6451BECADC08E /* Pods_iOS_workshop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F58BA2446C75D237727A3C /* Pods_iOS_workshop.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7698C9352A224F2700B928B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 765CFD872A1EB22100944D81 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 765CFD8E2A1EB22100944D81;
+			remoteInfo = "iOS workshop";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		043C5CFD2A2117AE001FDA04 /* RecipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
@@ -75,6 +89,11 @@
 		765CFDA02A1EB22600944D81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7698C9272A22103900B928B1 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		7698C9292A222F7A00B928B1 /* FoodApiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoodApiProtocol.swift; path = "iOS workshop/Screens/Details/ViewModle/FoodApiProtocol.swift"; sourceTree = SOURCE_ROOT; };
+		7698C9312A224F2700B928B1 /* iOS workshopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS workshopTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7698C9332A224F2700B928B1 /* iOS_workshopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_workshopTests.swift; sourceTree = "<group>"; };
+		7698C93A2A224F7D00B928B1 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		7698C93C2A224FD400B928B1 /* FakeFoodApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeFoodApi.swift; sourceTree = "<group>"; };
+		7698C93E2A22513500B928B1 /* FoodApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodApiTests.swift; sourceTree = "<group>"; };
 		76F06A4A2A20A48500144743 /* FoodCategoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodCategoriesCollectionViewCell.xib; sourceTree = "<group>"; };
 		A9F58BA2446C75D237727A3C /* Pods_iOS_workshop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_workshop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -85,6 +104,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				984D004392E6451BECADC08E /* Pods_iOS_workshop.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7698C92E2A224F2700B928B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				765CFD912A1EB22100944D81 /* iOS workshop */,
+				7698C9322A224F2700B928B1 /* iOS workshopTests */,
 				765CFD902A1EB22100944D81 /* Products */,
 				4BF7FEC625C7E2A66AAFE75D /* Pods */,
 				79B2136F0E8277BC3168D938 /* Frameworks */,
@@ -337,6 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				765CFD8F2A1EB22100944D81 /* iOS workshop.app */,
+				7698C9312A224F2700B928B1 /* iOS workshopTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -356,6 +384,17 @@
 				760AE5F62A21E6A200BD6D36 /* Meal.xcdatamodeld */,
 			);
 			path = "iOS workshop";
+			sourceTree = "<group>";
+		};
+		7698C9322A224F2700B928B1 /* iOS workshopTests */ = {
+			isa = PBXGroup;
+			children = (
+				7698C93A2A224F7D00B928B1 /* HomeViewModelTests.swift */,
+				7698C9332A224F2700B928B1 /* iOS_workshopTests.swift */,
+				7698C93C2A224FD400B928B1 /* FakeFoodApi.swift */,
+				7698C93E2A22513500B928B1 /* FoodApiTests.swift */,
+			);
+			path = "iOS workshopTests";
 			sourceTree = "<group>";
 		};
 		79B2136F0E8277BC3168D938 /* Frameworks */ = {
@@ -388,6 +427,24 @@
 			productReference = 765CFD8F2A1EB22100944D81 /* iOS workshop.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7698C9302A224F2700B928B1 /* iOS workshopTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7698C9372A224F2700B928B1 /* Build configuration list for PBXNativeTarget "iOS workshopTests" */;
+			buildPhases = (
+				7698C92D2A224F2700B928B1 /* Sources */,
+				7698C92E2A224F2700B928B1 /* Frameworks */,
+				7698C92F2A224F2700B928B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7698C9362A224F2700B928B1 /* PBXTargetDependency */,
+			);
+			name = "iOS workshopTests";
+			productName = "iOS workshopTests";
+			productReference = 7698C9312A224F2700B928B1 /* iOS workshopTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -400,6 +457,10 @@
 				TargetAttributes = {
 					765CFD8E2A1EB22100944D81 = {
 						CreatedOnToolsVersion = 13.3.1;
+					};
+					7698C9302A224F2700B928B1 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 765CFD8E2A1EB22100944D81;
 					};
 				};
 			};
@@ -417,6 +478,7 @@
 			projectRoot = "";
 			targets = (
 				765CFD8E2A1EB22100944D81 /* iOS workshop */,
+				7698C9302A224F2700B928B1 /* iOS workshopTests */,
 			);
 		};
 /* End PBXProject section */
@@ -435,6 +497,13 @@
 				762EA3AB2A20F05A009730BB /* HomeTabBar.xib in Resources */,
 				762EA3A82A20F05A009730BB /* HomeViewController.xib in Resources */,
 				043C5D002A2117AE001FDA04 /* RecipeCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7698C92F2A224F2700B928B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,7 +580,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7698C92D2A224F2700B928B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7698C9342A224F2700B928B1 /* iOS_workshopTests.swift in Sources */,
+				7698C93D2A224FD400B928B1 /* FakeFoodApi.swift in Sources */,
+				7698C93F2A22513500B928B1 /* FoodApiTests.swift in Sources */,
+				7698C93B2A224F7D00B928B1 /* HomeViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7698C9362A224F2700B928B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 765CFD8E2A1EB22100944D81 /* iOS workshop */;
+			targetProxy = 7698C9352A224F2700B928B1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		765CFD9D2A1EB22600944D81 /* LaunchScreen.storyboard */ = {
@@ -697,6 +785,40 @@
 			};
 			name = Release;
 		};
+		7698C9382A224F2700B928B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ahmed.iOS-workshopTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS workshop.app/iOS workshop";
+			};
+			name = Debug;
+		};
+		7698C9392A224F2700B928B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ahmed.iOS-workshopTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS workshop.app/iOS workshop";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -714,6 +836,15 @@
 			buildConfigurations = (
 				765CFDA42A1EB22600944D81 /* Debug */,
 				765CFDA52A1EB22600944D81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7698C9372A224F2700B928B1 /* Build configuration list for PBXNativeTarget "iOS workshopTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7698C9382A224F2700B928B1 /* Debug */,
+				7698C9392A224F2700B928B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

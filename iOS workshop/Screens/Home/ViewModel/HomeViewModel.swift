@@ -9,7 +9,7 @@ import Foundation
 class HomeVIewModel{
     var isLoading : Observable<Bool> = Observable(value: false)
     var cellDataSource : Observable<Array<Meal>> = Observable(value:nil)
-    var foodApi = FoodApi()
+    var foodApi:FoodApiProtocol = FoodApi()
     func getData(foodTag :String){
         if isLoading.value ?? true{
             return

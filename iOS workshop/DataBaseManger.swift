@@ -60,8 +60,7 @@ class DatabaseManager {
                     thumbnailURL: mealEntity.mealImage,
                     videoURL:  nil,
                     numServings: Int(  mealEntity.servingsNumber ),
-                    instructions: nil,
-                    tags: nil
+                    instructions: nil
                 )
             }
         } catch {

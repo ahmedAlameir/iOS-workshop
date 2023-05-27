@@ -46,6 +46,7 @@ class FoodApi:FoodApiProtocol {
             switch response.result {
             case .success(let value):
                 completionHandler(.success(value))
+                print(value.sections?.first?.position)
             case .failure(let error):
                 completionHandler(.failure(error))
             }
