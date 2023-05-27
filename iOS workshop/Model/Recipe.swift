@@ -13,7 +13,7 @@ class MealReaspond : Decodable {
 }
 
 struct Meal: Decodable {
-    var show_id: Int?
+    var id: Int?
     var name: String?
     var credits: [Credit]?
     var thumbnail_url: String?
@@ -23,7 +23,7 @@ struct Meal: Decodable {
     var tags: [Ingredient]?
     
     enum CodingKeys: String, CodingKey {
-        case show_id
+        case id
         case name
         case credits
         case thumbnail_url
@@ -66,7 +66,7 @@ struct Ingredient: Decodable {
 extension Meal {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        show_id = try container.decodeIfPresent(Int.self, forKey: .show_id)
+        id = try container.decodeIfPresent(Int.self, forKey: .id)
         name = try container.decodeIfPresent(String.self, forKey: .name)
         credits = try container.decodeIfPresent([Credit].self, forKey: .credits)
         thumbnail_url = try container.decodeIfPresent(String.self, forKey: .thumbnail_url)

@@ -19,11 +19,20 @@ class HomeVIewModel{
             self?.isLoading.value = false
             switch result{
             case .success(let data):
-                self?.cellDataSource.value = data.map{ $0 }
+                self?.cellDataSource.value = data
             case .failure(let error):
                 print(error.localizedDescription)
                 
             }
         }
+    }
+    func saveMeal(withData meal: Meal){
+        DatabaseManager.shared.saveMeal(withData: meal)
+    }
+    func deleteMeal(withId id : Int){
+        DatabaseManager.shared.deleteMeal(withId: id)
+    }
+    func getDataFormDataBase()-> [Meal]{
+        return DatabaseManager.shared.fetchAllMeals()
     }
 }
