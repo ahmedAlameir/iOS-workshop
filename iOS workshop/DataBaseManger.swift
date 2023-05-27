@@ -8,7 +8,10 @@
 import Foundation
 import CoreData
 class DatabaseManager {
-    static let shared = DatabaseManager()
+        static let shared = DatabaseManager()
+    private init(){
+        
+    }
     
     private lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "Meal")
@@ -22,7 +25,7 @@ class DatabaseManager {
     
     // MARK: - CRUD Operations
     
-    func createMeal(withData data: Meal) {
+    func saveMeal(withData data: Meal) {
         let managedObjectContext = persistentContainer.viewContext
         
         guard let entity = NSEntityDescription.entity(forEntityName: "MealEntity", in: managedObjectContext) else {
@@ -32,15 +35,17 @@ class DatabaseManager {
         let mealEntity = MealEntity(entity: entity, insertInto: managedObjectContext)
         mealEntity.chefName = data.credits?.first?.name
         mealEntity.foodType = data.credits?.first?.type
-        mealEntity.mealImage = data.thumbnail_url
+        mealEntity.mealImage = data.thumbnailURL
         mealEntity.mealName = data.name
-        mealEntity.servingsNumber = Int32(data.num_servings ?? 0 )
-        mealEntity.showId =  Int32(data.show_id ?? 0)
+        mealEntity.id =  Int32(data.id ?? 0)
+        mealEntity.servingsNumber = Int32(data.numServings ?? 0 )
+  
         
         saveContext()
     }
     
-    func fetchAllMeals() -> [Meal] {
+    
+     func fetchAllMeals() -> [Meal] {
         let managedObjectContext = persistentContainer.viewContext
         let fetchRequest: NSFetchRequest<MealEntity> = MealEntity.fetchRequest()
         
@@ -48,12 +53,13 @@ class DatabaseManager {
             let mealEntities = try managedObjectContext.fetch(fetchRequest)
             return mealEntities.map { mealEntity in
                 Meal(
-                    show_id: Int(  mealEntity.showId ),
+                    id: Int(  mealEntity.id ),
+
                     name: mealEntity.mealName,
                     credits: [Credit(name: mealEntity.chefName, type: mealEntity.foodType)],
-                    thumbnail_url: mealEntity.mealImage,
-                    video_url: nil,
-                    num_servings: Int(  mealEntity.servingsNumber ),
+                    thumbnailURL: mealEntity.mealImage,
+                    videoURL:  nil,
+                    numServings: Int(  mealEntity.servingsNumber ),
                     instructions: nil,
                     tags: nil
                 )
@@ -63,11 +69,33 @@ class DatabaseManager {
         }
     }
     
+    func deleteMeal(withId id: Int) {
+            let managedObjectContext = persistentContainer.viewContext
+            let fetchRequest: NSFetchRequest<MealEntity> = MealEntity.fetchRequest()
+
+            // Set a predicate to fetch the meal entity with the matching show_id
+            fetchRequest.predicate = NSPredicate(format: "id == %@", NSNumber(value: id))
+
+            do {
+                let mealEntities = try managedObjectContext.fetch(fetchRequest)
+
+                guard let mealEntity = mealEntities.first else {
+                    // Meal entity not found, handle the error or return
+                    return
+                }
+
+                managedObjectContext.delete(mealEntity)
+                saveContext()
+            } catch {
+                fatalError("Failed to fetch or delete meal: \(error)")
+            }
+        }
+    
     // MARK: - Core Data Stack
     
     private func saveContext() {
         let managedObjectContext = persistentContainer.viewContext
-        
+        managedObjectContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         if managedObjectContext.hasChanges {
             do {
                 try managedObjectContext.save()

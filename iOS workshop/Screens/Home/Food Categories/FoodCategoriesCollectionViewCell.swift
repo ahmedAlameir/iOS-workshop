@@ -24,5 +24,8 @@ class FoodCategoriesCollectionViewCell: UICollectionViewCell {
     func itemUnSelected(){
         categoriesView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.04)
     }
-
+    func configure(with category: Categories) {
+        categoriesImage.image = UIImage(named: category.categorieImage)
+          categoriesName.text = category.categorieName
+      }
 }
