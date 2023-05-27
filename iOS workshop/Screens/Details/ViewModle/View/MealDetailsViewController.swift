@@ -18,19 +18,21 @@ class MealDetailsViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupTables()
-        let overlayImg = UIImage(named: "ic_overlay")
-        let overlayImgView = UIImageView(image:  overlayImg)
-        overlayImgView.frame = mealImgHeader.frame
-        mealImgHeader.addSubview(overlayImgView)
-        navigationController?.navigationBar.isHidden = true
-        navigationItem.largeTitleDisplayMode = .never
-        ingredientTable.reloadData()
-       let height = ingredientTable.contentSize.height
         
+        navigationController?.navigationBar.isHidden = true
+       
+        
+        ingredientTable.reloadData()
+        adjustingTableHeight(tableView: ingredientTable, heightConstraint: ingredientHeight)
+        adjustingTableHeight(tableView: instructionsTable, heightConstraint: instructionHeight)
+        view.setNeedsLayout()
     }
     
+    @IBOutlet weak var ingredientHeight: NSLayoutConstraint!
     
+    @IBOutlet weak var instructionHeight: NSLayoutConstraint!
     
+    @IBOutlet weak var similarCOllection: UICollectionView!
     
     /*
      // MARK: - Navigation
@@ -41,10 +43,8 @@ class MealDetailsViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }*/
     
-    
-  
-    @IBOutlet weak var instructionsTable: TableViewAdjustedHeight!
-    @IBOutlet weak var ingredientTable: TableViewAdjustedHeight!
+    @IBOutlet weak var ingredientTable: UITableView!
+    @IBOutlet weak var instructionsTable: UITableView!
     
 }
 extension MealDetailsViewController : UITableViewDelegate,UITableViewDataSource{
@@ -58,6 +58,9 @@ extension MealDetailsViewController : UITableViewDelegate,UITableViewDataSource{
             instructionsTable.register(UINib(nibName: "DetailsTableViewCell", bundle: .main), forCellReuseIdentifier: "DetailsTableViewCell")
            
         }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch tableView{
         case ingredientTable:
@@ -75,30 +78,32 @@ extension MealDetailsViewController : UITableViewDelegate,UITableViewDataSource{
         switch tableView{
         case ingredientTable:
             cell.initializeCell(name: "Hadia")
-            break
+        case instructionsTable:
+            cell.initializeCell(name: "ttttttttt")
         default:
-            cell.initializeCell(name: "Hadia")
             break
-            
+
         }
         return cell
     }
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//            // Calculate the height based on the cell's content
-//        let yourContentHeight: CGFloat = calculateContentHeightForIndexPath(indexPath:indexPath)
-//            let cellHeight = yourContentHeight + 5 // Include any additional padding or spacing
-//
-//            return cellHeight
-//
-//
-//    }
-//    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 88.0
-//    }
-//    calculateContentHeightForIndexPath(indexPath: IndexPath){
-//
-//    }
+
+    func adjustingTableHeight(tableView:UITableView, heightConstraint:NSLayoutConstraint){
+        let height = tableView.contentSize.height
+        heightConstraint.constant = height
     }
+    }
+//extension MealDetailsViewController : UICollectionViewDelegate,UICollectionViewDataSource{
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return 5
+//    }
+    
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeCell", for: indexPath) as! RecipeCell
+//        return cell
+//    }
+//
+    
+//}
 
 
 
